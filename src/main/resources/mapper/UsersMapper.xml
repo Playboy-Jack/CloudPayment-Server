@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cloudpayment.mapper.UsersMapper">
+
+    <resultMap id="BaseResultMap" type="com.cloudpayment.domain.Users">
+            <id property="userid" column="UserID" jdbcType="INTEGER"/>
+            <result property="username" column="UserName" jdbcType="VARCHAR"/>
+            <result property="passwordhash" column="PasswordHash" jdbcType="VARCHAR"/>
+            <result property="userrole" column="UserRole" jdbcType="VARCHAR"/>
+            <result property="email" column="Email" jdbcType="VARCHAR"/>
+            <result property="phonenumber" column="PhoneNumber" jdbcType="VARCHAR"/>
+            <result property="avatar" column="Avatar" jdbcType="VARCHAR"/>
+            <result property="lastLoginDate" column="Last_Login_Date" jdbcType="TIMESTAMP"/>
+            <result property="status" column="Status" jdbcType="CHAR"/>
+            <result property="createTime" column="Create_Time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="Update_Time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        UserID,UserName,PasswordHash,
+        UserRole,Email,PhoneNumber,
+        Avatar,Last_Login_Date,Status,
+        Create_Time,Update_Time
+    </sql>
+</mapper>
